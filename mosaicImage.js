@@ -64,6 +64,7 @@
 					////TODO el mundo a la fiestaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 					// array: salvare y,x blocksize
 					////
+					txArea.value += "DRAW(DOMAIN([[" + x + "," + (x+blockSizeX) + "], [" + y + ", " + (y+blockSizeY) + "],[0,2]])([1,1,1]));\n";
 					for(var y1=y; y1<y+blockSizeY; y1++){
 						for (var x1=x; x1<x+blockSizeX; x1++){
 							if(y1<h && x1<w){
@@ -71,7 +72,6 @@
 								imgData.data[(y1*4*w)+(x1*4)+1]=0
 								imgData.data[(y1*4*w)+(x1*4)+2]=0
 								imgData.data[(y1*4*w)+(x1*4)+3]=255
-								txArea.value += "DRAW(T([0,1])([" + x1 + "," + y1 + "])(CUBOID([" + blockSizeX +", " + blockSizeY + ", 1])))\n";
 								//blocksCoordinates.push([x1,y1]);
 							}
 						}
