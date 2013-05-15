@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <style></style>
+  </head>
+  <body>
+      <table>
+	    <tr>
+		<td>
+		<h2>Block Decomposition</h2>
+		<p align="justify">Choose the block size to decompose the image</p>
+		<br>					
+		      Block Size: <input type="range" id="blkS"  value="1" min="1" max="10" step="1" / style="width: 100%;" onChange="changed()">
+		      <div id="BlockSize">&nbsp;</div>
+		<br>
+		<br>
+		</td>
+	  </tr>
+      </table>
+
+      
+      
+    <canvas id="idCanvas"></canvas>
+    <script src="html5slider.js"></script>
+    
+    <script src="mosaicImage.js"></script>    
+  	<script type="text/javascript">
+		var img = new Image();
+		img.crossOrigin = '';
+	img.onload = function() {
+	      var $ = function(id) { return document.getElementById(id); };
+	      $('blkS').oninput = function() { $('BlockSize').innerHTML = this.value; };
+	      $('blkS').oninput();
+	      mosaicImage(img, 1);
+	      };
+	
+	//onChange function
+	function changed(){
+	      var blockSize = document.getElementById('blkS').value;
+	      mosaicImage(img, parseInt(blockSize));
+	};
+	
+	document.body.appendChild(img);
+	img.src = "images/cranio.png";
+  
+  </script>
+     
+  </body>
+</html>
