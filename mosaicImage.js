@@ -15,9 +15,6 @@
 		//imgData: a new image data that will contains the image pixelled
 		var imgData = ctx.createImageData(w,h);	
 
-		//blocks coordinates
-		//var blocksCoordinates = new Array();
-
 		//Take text area
 		var txArea = document.getElementById("tx_coordinates");
 		txArea.value = " T = function (dims) {\n\treturn function (values) {\n\t\treturn function (object) {\n\t\t\treturn object.translate(dims, values);\n\t\t};\n\t};\n}\n\n";
@@ -72,7 +69,6 @@
 								imgData.data[(y1*4*w)+(x1*4)+1]=0
 								imgData.data[(y1*4*w)+(x1*4)+2]=0
 								imgData.data[(y1*4*w)+(x1*4)+3]=255
-								//blocksCoordinates.push([x1,y1]);
 							}
 						}
 					}
@@ -85,7 +81,6 @@
 		}
 
 		ctx.putImageData(imgData,0,0);
-		console.log(blocksCoordinates[5]);
 		return true;
 	}
 	
