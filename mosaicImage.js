@@ -58,9 +58,6 @@
 					}
 
 				else{
-					////TODO el mundo a la fiestaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-					// array: salvare y,x blocksize
-					////
 					txArea.value += "DRAW(DOMAIN([[" + x + "," + (x+blockSizeX) + "], [" + y + ", " + (y+blockSizeY) + "],[0,2]])([1,1,1]));\n";
 					for(var y1=y; y1<y+blockSizeY; y1++){
 						for (var x1=x; x1<x+blockSizeX; x1++){
