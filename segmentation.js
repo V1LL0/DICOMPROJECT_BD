@@ -118,8 +118,8 @@ onload = function() {
 	  
         var canvas = document.getElementById(canvas_num);
         var context = canvas.getContext('2d');
-        var x = 20;
-        var y = 20;
+        var x = 0;
+        var y = 0;
 		//Starting pixels for the processing
         context.drawImage(imageObj, x, y);
 
