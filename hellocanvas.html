@@ -17,8 +17,23 @@ var context = canvas.getContext("2d");
 function callback() {
 	console.log('hello canvas');
 	//images
-	context.drawImage(images[1], 0, 0);
+	var k=0;
+	var interval = setInterval( function () {
+		canvas.width = images[k].width;
+		canvas.height = images[k].height;
+		context = canvas.getContext("2d");	
+		context.drawImage(images[k], 0, 0);
+		k++;
+
+    if(k>=images.length)
+			clearInterval(interval);
+	
+  }, 2000);
 }
+
+
+
+
 
 function handle_files(event) {
   var files = this.files;
@@ -49,7 +64,7 @@ function handle_files(event) {
         completed += 1;
 
         if (completed === len) {
-          callback();
+	      	callback();
         }
       };
     })(file);
