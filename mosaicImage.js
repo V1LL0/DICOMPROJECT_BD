@@ -106,15 +106,11 @@
 
 
 		for(var i=0; i<rectanglesArray.length; i++){
-			txArea.value += "DRAW(DOMAIN([[" + rectanglesArray[i][0] + "," + (rectanglesArray[i][0]+rectanglesArray[i][2]) + "], [" + rectanglesArray[i][1] + ", " + (rectanglesArray[i][1]+rect[3]) + "],[0,2]])([1,1,1]));\n";
+			txArea.value += "DRAW(DOMAIN([[" + rectanglesArray[i][0] + "," + (rectanglesArray[i][0]+rectanglesArray[i][2]) + "], [" + rectanglesArray[i][1] + ", " + (rectanglesArray[i][1]+rectanglesArray[i][3]) + "],[0,2]])([1,1,1]));\n";
 		}
 
-			ctxDestination.putImageData(data,0,0);
-			ctxDestination.drawImage(img, 0,0);
-
-		
 			ctxDestination.putImageData(imgData,0,0);
-			ctxOrigin.putImageData(imgData,0,0);
+			
 			return true;
 	}
 	

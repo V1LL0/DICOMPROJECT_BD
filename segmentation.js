@@ -5,6 +5,7 @@ onload = function() {
 	  $('mini').oninput();
 	  $('maxi').oninput = function() { $('massimo').innerHTML = this.value; };
 	  $('maxi').oninput();
+
 	};
 
 
@@ -45,8 +46,8 @@ onload = function() {
 	  function drawImage_segm(imageObj) {
         var canvas = document.getElementById('canvas_1');
         var context = canvas.getContext('2d');
-        var x = 20;
-        var y = 20;
+        var x = 0;
+        var y = 0;
 
 		//Starting pixels for the processing
         context.drawImage(imageObj, x, y);
@@ -107,9 +108,9 @@ onload = function() {
 		//Generate the dataURL for the image transfer
 		var dataURL = canvas.toDataURL("image/png");
 		
-		//Populate the Textarea with the dataURL
-		var target_url = document.getElementById("dt_url");
-		target_url.value = dataURL;
+		// //Populate the Textarea with the dataURL
+		// var target_url = document.getElementById("dt_url");
+		// target_url.value = dataURL;
       }
 	  
 	  //Samples of Segmentation functions
@@ -184,6 +185,32 @@ onload = function() {
 	  };
 	   
       imageObj.src="images/brain/IM-0001-0014.png";
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+var image_url = "images/brain/IM-0001-0014.png";
+//$('.bg').css('background-image');
+//image_url = image_url.slice(4, -1); // now you can have all kinds of characters in your image urls
+var image = new Image();
+
+image.src = image_url;
+
+    var w = image.width;
+    var h = image.height;
+
+    var stringa = '<canvas id="canvas_1" height="'+h+'" width="'+w+'" class="bezier"></canvas>';
+    var div = document.getElementById("divCanvas_1");
+    div.innerHTML = stringa;
 
 
 
