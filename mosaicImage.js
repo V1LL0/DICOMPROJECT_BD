@@ -1,20 +1,29 @@
-	function mosaicImage(img, blockSize) {
+	function mosaicImage(blockSize) {
 
-		var canvas = document.getElementById("idCanvas");
-		var w = img.clientWidth;
-		var h = img.clientHeight;
-		canvas.width = w;
-		canvas.height = h;
+		var canvasOrigin = document.getElementById("canvas_1");
+
+		// var w = img.clientWidth;
+		// var h = img.clientHeight;
+		// canvasOrigin.width = w;
+		// canvasOrigin.height = h;
 		
-		var ctx = canvas.getContext("2d");
-		ctx.drawImage(img, 0,0);
+		var w = canvasOrigin.width;
+		var h = canvasOrigin.height;
+
+
+		var ctxOrigin = canvasOrigin.getContext("2d");
 
 		//data: image data that contains original image	
-		var data = ctx.getImageData(0,0,w,h).data;
+		var data = ctxOrigin.getImageData(0,0,w,h).data;
+
+		var canvasDestination = document.getElementById('idCanvas');
+		var ctxDestination = canvasDestination.getContext("2d");
+
 		
 		//imgData: a new image data that will contains the image pixelled
-		var imgData = ctx.createImageData(w,h);	
+		var imgData = ctxDestination.createImageData(w,h);	
 
+		
 		//Take text area
 		var txArea = document.getElementById("tx_coordinates");
 		txArea.value = " T = function (dims) {\n\treturn function (values) {\n\t\treturn function (object) {\n\t\t\treturn object.translate(dims, values);\n\t\t};\n\t};\n}\n\n";
@@ -96,11 +105,35 @@
 		}
 
 
-	for(var i=0; i<rectanglesArray.length; i++){
-		txArea.value += "DRAW(DOMAIN([[" + rectanglesArray[i][0] + "," + (rectanglesArray[i][0]+rectanglesArray[i][2]) + "], [" + rectanglesArray[i][1] + ", " + (rectanglesArray[i][1]+rect[3]) + "],[0,2]])([1,1,1]));\n";
-	}
+		for(var i=0; i<rectanglesArray.length; i++){
+			txArea.value += "DRAW(DOMAIN([[" + rectanglesArray[i][0] + "," + (rectanglesArray[i][0]+rectanglesArray[i][2]) + "], [" + rectanglesArray[i][1] + ", " + (rectanglesArray[i][1]+rect[3]) + "],[0,2]])([1,1,1]));\n";
+		}
 
-		ctx.putImageData(imgData,0,0);
-		return true;
+			ctxDestination.putImageData(data,0,0);
+			ctxDestination.drawImage(img, 0,0);
+
+		
+			ctxDestination.putImageData(imgData,0,0);
+			ctxOrigin.putImageData(imgData,0,0);
+			return true;
 	}
 	
+	
+	var img = new Image();
+	img.crossOrigin = '';
+	
+	img.onload = function() {
+		var $ = function(id) { return document.getElementById(id); };
+		$('blkS').oninput = function() { $('BlockSize').innerHTML = this.value; };
+		$('blkS').oninput();
+		mosaicImage(1);
+	};
+
+	//onChange function
+	function changedBlk(){
+	      var blockSize = document.getElementById('blkS').value;
+	      mosaicImage(parseInt(blockSize));
+	};
+	
+
+

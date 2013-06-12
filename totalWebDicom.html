@@ -4,51 +4,82 @@
     <meta charset="UTF-8">
     <style></style>
   </head>
+  
   <body>
     <script src="html5slider.js"></script>
     <script src="mosaicImage.js"></script>
-
+    <script src="segmentation.js"></script>
+    <script src="imagesLoader.js"></script>
     
-  
-      <table>
-	    <tr>
-		<td>
-		<h2>Block Decomposition</h2>
-		<p align="justify">Choose the block size to decompose the image</p>
-		<br>					
-		      Block Size: <input type="range" id="blkS"  value="1" min="1" max="10" step="1" / style="width: 100%;" onChange="changed()">
-		      <div id="BlockSize">&nbsp;</div>
-		<br>
-		<br>
-		</td>
-	  </tr>
-      </table>
+    <table style="width: 100%">
+
+		<tr><td align="center" COLSPAN="2"><h2>Web Dicom Project</h2><br><h2>Samples</h2></td></tr>
+		<tr><td align="center" COLSPAN="2">
+			<input type="file" id="files" name="files[]" multiple />
+			<output id="list"></output>
+		</td></tr>
+		<tr>
+			<td><h2>Original image</h2></td>
+			<td>
+				<h2>Grayscale filter</h2>
+				<p align="justify">We need to convert the image to gray for having a deeper precision for the segmentation.</p>
+			</td>
+		</tr>
+		<tr>
+			<td align="center" style="width: 50%">
+				<img src="images/brain/IM-0001-0014.png" onLoad="changedSegm()">
+			</td align="center" style="width: 50%">
+			<td align="center">
+				<canvas id="canvas_2" width="550" height="550" style="padding-top: 90px"></canvas>
+			</td>
+		</tr>
+		
+		<tr><td>&nbsp;</td></tr>
+		<tr>
+		      <tr><td COLSPAN="2" align="center"><h2>Choose thresholding levels:</h2></td></tr>
+		
+			<tr>
+				<td align="center">
+						<canvas id="canvas_1" width="550" height="550"></canvas>
+				</td>
+				<td>
+					<table>
+						<tr>
+							<td>
+							<h2>Thresholding segmentation</h2>
+							<p align="justify">This algorithm is based on evidencing a range [min,max] of segmentation value. <br><br>Values [min,max] are sent to a thresholding algorithm that parses every pixel and analizes all RGB informations; once a range of value is chosen, the image will show te area with the same RGB density.</p>
+							<br>					
+								MIN: <input type="range" id="mini"  value="150" min="0" max="765" step="1" / style="width: 100%;" onChange="changedSegm()">
+								<div id="minimo">&nbsp;</div><br><br>
+								MAX: <input type="range" id="maxi"  value="200" min="0" max="765" step="1" / style="width: 100%;" onChange="changedSegm()">
+								<div id="massimo">&nbsp;</div><br>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		
+		</tr>
+	</table>
+
+
+	<table>
+		<tr>
+			<td>
+			<h2>Block Decomposition</h2>
+			<p align="justify">Choose the block size to decompose the image</p>
+			<br>					
+				Block Size: <input type="range" id="blkS"  value="1" min="1" max="10" step="1" / style="width: 100%;" onChange="changedBlk()">
+				<div id="BlockSize">&nbsp;</div>
+			<br>
+			<br>
+			</td>
+		</tr>
+	</table>
 
       
       
-    <canvas id="idCanvas"></canvas>
-      
-  	<script type="text/javascript">
-		var img = new Image();
-		img.crossOrigin = '';
-	img.onload = function() {
-	      var $ = function(id) { return document.getElementById(id); };
-	      $('blkS').oninput = function() { $('BlockSize').innerHTML = this.value; };
-	      $('blkS').oninput();
-	      mosaicImage(img, 1);
-	      };
-	
-	//onChange function
-	function changed(){
-	      var blockSize = document.getElementById('blkS').value;
-	      mosaicImage(img, parseInt(blockSize));
-	};
-	
-	document.body.appendChild(img);
-	img.src = "images/br2_1.png";
-  
-  </script>
-     
+    <canvas id="idCanvas" width="550" height="550"></canvas>
 
     <td align="center" style="width: 50%">
 		<textarea rows="30" id="tx_coordinates" name="tx_coordinates" style="width: 90%"></textarea>
