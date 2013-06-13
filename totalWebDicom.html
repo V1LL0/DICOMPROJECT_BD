@@ -11,8 +11,8 @@
 
 		<tr><td align="center" COLSPAN="2"><h2>Web Dicom Project</h2><br><h2>Samples</h2></td></tr>
 		<tr><td align="center" COLSPAN="2">
-			<input type="file" id="files" name="files[]" multiple />
-			<output id="list"></output>
+			<input id="input" type="file" multiple>
+
 		</td></tr>
 		<tr>
 			<td><h2>Original image</h2></td>
@@ -23,7 +23,8 @@
 		</tr>
 		<tr>
 			<td align="center" style="width: 50%">
-				<img src="images/brain/IM-0001-0014.png" onLoad="changedSegm()">
+				<!-- <img src="images/brain/IM-0001-0014.png" onLoad="changedSegm()"> -->
+				<canvas id="canvasOriginalImage" width="550" height="550"></canvas>
 			</td align="center" style="width: 50%">
 			<td align="center">
 				<canvas id="canvas_2" width="550" height="550" style="padding-top: 90px"></canvas>
