@@ -1,4 +1,13 @@
-	function mosaicImage(blockSize) {
+	var stringaFunzione = "";
+	var blockSize = 1;
+	//blockSize = dimensione del blocco
+	//y_n_coordinates = booleano che indica se si vogliono
+	//le coordinate in una stringa/funzione che poi
+	//verra' eseguita in plasm
+	function mosaicImage(blockSize, y_n_coordinates) {
+
+		if(y_n_coordinates === null || y_n_coordinates === undefined)
+			y_n_coordinates = false;
 
 		var canvasOrigin = document.getElementById("canvas_1");
 
@@ -23,10 +32,8 @@
 		//imgData: a new image data that will contains the image pixelled
 		var imgData = ctxDestination.createImageData(w,h);	
 
-		
-		//Take text area
-		var txArea = document.getElementById("tx_coordinates");
-		txArea.value = " T = function (dims) {\n\treturn function (values) {\n\t\treturn function (object) {\n\t\t\treturn object.translate(dims, values);\n\t\t};\n\t};\n}\n\n";
+		if(y_n_coordinates)
+			stringaFunzione += "\n\n\n\n";
 
 		//Array of rectangles
 		//A rectangle is an array as [x,y,baseLength,Height]
@@ -104,16 +111,16 @@
 			}
 		}
 
-
-		for(var i=0; i<rectanglesArray.length; i++){
-			txArea.value += "DRAW(DOMAIN([[" + rectanglesArray[i][0] + "," + (rectanglesArray[i][0]+rectanglesArray[i][2]) + "], [" + rectanglesArray[i][1] + ", " + (rectanglesArray[i][1]+rectanglesArray[i][3]) + "],[0,2]])([1,1,1]));\n";
-		}
+		if(y_n_coordinates)
+			for(var i=0; i<rectanglesArray.length; i++){
+				stringaFunzione += "DRAW(DOMAIN([[" + rectanglesArray[i][0] + "," + (rectanglesArray[i][0]+rectanglesArray[i][2]) + "], [" + rectanglesArray[i][1] + ", " + (rectanglesArray[i][1]+rectanglesArray[i][3]) + "],[0,2]])([1,1,1]));\n";
+			}
 
 			ctxDestination.putImageData(imgData,0,0);
 			
 			return true;
 	}
-	
+
 	
 	var img = new Image();
 	img.crossOrigin = '';
@@ -127,8 +134,8 @@
 
 	//onChange function
 	function changedBlk(){
-	      var blockSize = document.getElementById('blkS').value;
-	      mosaicImage(parseInt(blockSize));
+		blockSize = document.getElementById('blkS').value;
+	    mosaicImage(parseInt(blockSize));
 	};
 	
 
