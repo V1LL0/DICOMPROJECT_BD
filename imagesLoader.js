@@ -12,17 +12,21 @@ var firstImg = new Image();
 
 
 function callback() {
+
   firstImg = images[(images.length/2) | 0];
   context.drawImage(firstImg, 0, 0);
+  drawImage_gray(firstImg);
+  prepare_canvas(firstImg);
+  drawImage_segm(firstImg);
 }
+
 
 //funzione che ci cambia imageObj
-function change_imgObj(new_Image){
-  imageObj = new_Image;
-}
+// function change_imgObj(new_Image){
+//   imageObj = new_Image;
+// }
 
 function handle_files(event) {
-
   //console.log("i'm in!");
   var files = this.files;
 

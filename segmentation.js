@@ -174,6 +174,7 @@ onload = function() {
 	  
 	  //onChange function
 	  function changedSegm(){
+	  	change_imgObj(firstImg);
 		drawImage_gray(imageObj);
 		drawImage_segm(imageObj);
 	  };
