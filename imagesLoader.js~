@@ -8,22 +8,36 @@ var input = document.getElementById('input');
 var images = [];
 var canvas = document.getElementById("canvasOriginalImage");
 var context = canvas.getContext("2d");
-var firstImg = new Image();
 
 
 function callback() {
-  firstImg = images[(images.length/2) | 0];
+  //console.log('hello canvas');
+  //images
+  // var k=0;
+  // var interval = setInterval( function () {
+  //   canvas.width = images[k].width;
+  //   canvas.height = images[k].height;
+  //   context = canvas.getContext("2d");  
+  //   context.drawImage(images[k], 0, 0);
+  //   k++;
+
+  //   if(k>=images.length)
+  //     clearInterval(interval);
+  
+  // }, 2000);
+
+
+  var firstImg = images[(images.length/2) | 0];
+
   context.drawImage(firstImg, 0, 0);
+
+
 }
 
-//funzione che ci cambia imageObj
-function change_imgObj(new_Image){
-  imageObj = new_Image;
-}
 
 function handle_files(event) {
 
-  //console.log("i'm in!");
+  console.log("i'm in!");
   var files = this.files;
 
   var len = files.length;
@@ -47,7 +61,7 @@ function handle_files(event) {
         // var img = document.createElement('img');
         // img.setAttribute('src', data);
         // img.setAttribute('data-name', file.name);
-        var img = new Image();
+        var img = new Image;
         img.src = data;
         images.push(img);
         completed += 1;
@@ -64,7 +78,6 @@ function handle_files(event) {
 }
 
 input.addEventListener('change', handle_files);
-
 
 
   

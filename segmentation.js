@@ -1,3 +1,10 @@
+var imageObj = new Image();
+
+//funzione che ci cambia imageObj
+function change_imgObj(new_Image){
+	imageObj = new_Image;
+}
+
 onload = function() {
 	  var images = new Array();
     	  var $ = function(id) { return document.getElementById(id); };
@@ -163,9 +170,7 @@ onload = function() {
       
       
 
-      var imageObj = new Image();
-	  
-	  
+      
 	  
 	  //onChange function
 	  function changedSegm(){
@@ -173,18 +178,18 @@ onload = function() {
 		drawImage_segm(imageObj);
 	  };
 	  
-	   function clicked(){
-		drawImage_samp(imageObj, 10, 100, "canvas_3");
-		drawImage_samp(imageObj, 100, 200, "canvas_4");
-		drawImage_samp(imageObj, 200, 250, "canvas_5");
-		drawImage_samp(imageObj, 250, 300, "canvas_6");
-		drawImage_samp(imageObj, 300, 400, "canvas_7");
-		drawImage_samp(imageObj, 400, 500, "canvas_8");
-		drawImage_samp(imageObj, 400, 600, "canvas_9");
-		drawImage_samp(imageObj, 500, 700, "canvas_10");
-	  };
+	 //   function clicked(){
+		// drawImage_samp(imageObj, 10, 100, "canvas_3");
+		// drawImage_samp(imageObj, 100, 200, "canvas_4");
+		// drawImage_samp(imageObj, 200, 250, "canvas_5");
+		// drawImage_samp(imageObj, 250, 300, "canvas_6");
+		// drawImage_samp(imageObj, 300, 400, "canvas_7");
+		// drawImage_samp(imageObj, 400, 500, "canvas_8");
+		// drawImage_samp(imageObj, 400, 600, "canvas_9");
+		// drawImage_samp(imageObj, 500, 700, "canvas_10");
+	 //  };
 	   
-      imageObj.src="images/brain/IM-0001-0014.png";
+      // imageObj.src="images/brain/IM-0001-0014.png";
 
 
 
@@ -198,19 +203,22 @@ onload = function() {
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-var image_url = "images/brain/IM-0001-0014.png";
-//$('.bg').css('background-image');
-//image_url = image_url.slice(4, -1); // now you can have all kinds of characters in your image urls
-var image = new Image();
+// var image_url = "images/brain/IM-0001-0014.png";
+// //$('.bg').css('background-image');
+// //image_url = image_url.slice(4, -1); // now you can have all kinds of characters in your image urls
+// var image = new Image();
 
-image.src = image_url;
-
+// image.src = image_url;
+function prepare_canvas(image){
     var w = image.width;
     var h = image.height;
 
     var stringa = '<canvas id="canvas_1" height="'+h+'" width="'+w+'" class="bezier"></canvas>';
     var div = document.getElementById("divCanvas_1");
+    //divCanvas -> prendo imageUrl, faccio una stringa che mi prepara una canvas con le stesse dimensioni dell'immagine
     div.innerHTML = stringa;
+}
+
 
 
 

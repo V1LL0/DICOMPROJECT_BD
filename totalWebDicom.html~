@@ -26,7 +26,6 @@
 				<!-- <img src="images/brain/IM-0001-0014.png" onLoad="changedSegm()"> -->
 				<canvas id="canvasOriginalImage" width="550" height="550"></canvas>
 			</td align="center" style="width: 50%">
-
 			<td align="center">
 				<canvas id="canvas_2" width="550" height="550" style="padding-top: 90px"></canvas>
 			</td>
@@ -86,21 +85,12 @@
 	</td>
   
   </body>
-  	
-    <script src="imagesLoader.js"></script>
-  
-<!--    <script src="multiplefiles.js"></script> -->
-	<!-- richiamo la variabile firstImg dal file imagesLoader.js -->
-	<script>
-		prepare_canvas(firstImg);
- 		//per la segmentation
-		change_imgObj(firstImg);
-	</script>
-  	
-  	<script src="segmentation.js"></script>
- 	<script src="html5slider.js"></script>
-    
+
+    <script src="html5slider.js"></script>
     <script src="mosaicImage.js"></script>
+    <script src="segmentation.js"></script>
+    <script src="imagesLoader.js"></script>
+    <script src="multiplefiles.js"></script>
 
     
 
