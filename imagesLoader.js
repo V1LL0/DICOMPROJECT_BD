@@ -1,9 +1,5 @@
    //////////////////FILES READER/////////////////////////////////  
 
-
-//<input id="input" type="file" multiple>
-//<canvas id="theCanvas" width="500" height="500"></canvas>
-
 var input = document.getElementById('input');
 var images = [];
 var canvas = document.getElementById("canvasOriginalImage");
@@ -22,7 +18,7 @@ function callback() {
 
 function handle_files(event) {
   images = [];
-  //console.log("i'm in!");
+ 
   var files = this.files;
 
   var len = files.length;

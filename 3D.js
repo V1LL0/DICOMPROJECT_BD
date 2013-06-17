@@ -35,11 +35,9 @@ function clicked3D() {
 	
 		changedSegm();
 
-		// stringa_definitiva += stringa_presa+"\n\n\n";
-		// txArea.value = stringa_definitiva;
-	
 		parametro_per_piu_immagini = i;
 	}
+	
 	//se supera la lunghezza dell'array allora posso chiudere tutto e non va più avanti nel caso si clicca ancora sul NEXT
 	if(i>images.length)
 		return;

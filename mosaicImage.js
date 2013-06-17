@@ -6,13 +6,9 @@
 	//le coordinate in una stringa/funzione che poi
 	//verra' eseguita in plasm
 	function mosaicImage(blockSize, y_n_coordinates) {
-		console.log("ciao.. sono qui in mosaicImage!")
 		
-		console.log("ciao, sono y_n_coordinates : "+ y_n_coordinates)
-		console.log("ciao, sono blockSize : " + blockSize)
-
 		if(y_n_coordinates === null || y_n_coordinates === undefined)
-			y_n_coordinates = false;
+		y_n_coordinates = false;
 		
 		var canvasOrigin = document.getElementById("canvas_segm");
 		
@@ -23,7 +19,6 @@
 
 		//data: image data that contains original image	
 		var data = ctxOrigin.getImageData(0,0,w,h).data;
-		// console.log("data di ctxOrigini canvas_segm mosaicImage: "+ data)
 
 		var canvasDestination = document.getElementById('canvas_blockDecomp');
 		var ctxDestination = canvasDestination.getContext("2d");
@@ -115,8 +110,7 @@
 		if(y_n_coordinates){
 			var dist = k*5;
 			var alt = (k*5)+5
-			console.log("valore di rettaglesArray: "+ rectanglesArray.length)
-			
+
 			for(var i=0; i<rectanglesArray.length; i++){
 				
 				stringaFunzione += "DRAW(DOMAIN([[" + rectanglesArray[i][0] + "," + (rectanglesArray[i][0]+rectanglesArray[i][2]) + "], [" + rectanglesArray[i][1] + ", " + (rectanglesArray[i][1]+rectanglesArray[i][3]) + "],[" + dist + "," + alt + "]])([1,1,1]));\n";

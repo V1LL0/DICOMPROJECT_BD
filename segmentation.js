@@ -161,7 +161,6 @@ onload = function() {
 	  
 	  //onChange function
 	  function changedSegm(){
-	  	// console.log("entro in changedSegm")
 	  	change_imgObj(firstImg);
 		drawImage_gray(imageObj);
 		drawImage_segm(imageObj);
