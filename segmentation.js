@@ -19,7 +19,7 @@ onload = function() {
 //Grayscale Filter
 	//For descriptions of generic functions, please see the original "Thresholding algorithm"
 	function drawImage_gray(imageObj) {
-        var canvas = document.getElementById('canvas_2');
+        var canvas = document.getElementById('canvas_gray');
         var context = canvas.getContext('2d');
         
 		var x = 0;
@@ -51,7 +51,7 @@ onload = function() {
 	//Image Segmentation alghorithm  
 	  
 	  function drawImage_segm(imageObj) {
-        var canvas = document.getElementById('canvas_1');
+        var canvas = document.getElementById('canvas_segm');
         var context = canvas.getContext('2d');
         var x = 0;
         var y = 0;
@@ -63,10 +63,6 @@ onload = function() {
         var imageData = context.getImageData(x, y, imageObj.width, imageObj.height);
         var data = imageData.data;
 		
-		// //Populate the Textarea with the coordinates
-		// var target_coo = document.getElementById("dt_coo");
-		// target_coo.value = "";
-			
 		//Thresholding values MIN-MAX
 		var  mini 	= document.getElementById('mini').value;
 		var  maxi 	= document.getElementById('maxi').value;
@@ -95,29 +91,20 @@ onload = function() {
 		      //Make white the out of range
 		      v = 255;
 		} 
-		// else	{
-			      // if(check_box.checked == true){					
-				     //  y_1 = Math.floor(Math.floor(i/imageObj.width)/4);
-				      
-				     //  target_coo.value += "DRAW(T([1,2])([" + j + "," + y_1 + "])(CUBOID([1,1,1])))\n";
-			      // }
-		// }
+		
 		//Re-creation of the long Array of pixels.
 		data[i] = v; data[i+1] = v; data[i+2] = v;		  
 		
 		//Incrementing the value of the axis
 		j++;
-        }
+       }
 		
         // overwrite original image
         context.putImageData(imageData, x, y);
 		
 		//Generate the dataURL for the image transfer
 		var dataURL = canvas.toDataURL("image/png");
-		
-		// //Populate the Textarea with the dataURL
-		// var target_url = document.getElementById("dt_url");
-		// target_url.value = dataURL;
+
       }
 	  
 	  //Samples of Segmentation functions
@@ -174,26 +161,13 @@ onload = function() {
 	  
 	  //onChange function
 	  function changedSegm(){
+	  	// console.log("entro in changedSegm")
 	  	change_imgObj(firstImg);
 		drawImage_gray(imageObj);
 		drawImage_segm(imageObj);
+		changedBlk();
 	  };
 	  
-	 //   function clicked(){
-		// drawImage_samp(imageObj, 10, 100, "canvas_3");
-		// drawImage_samp(imageObj, 100, 200, "canvas_4");
-		// drawImage_samp(imageObj, 200, 250, "canvas_5");
-		// drawImage_samp(imageObj, 250, 300, "canvas_6");
-		// drawImage_samp(imageObj, 300, 400, "canvas_7");
-		// drawImage_samp(imageObj, 400, 500, "canvas_8");
-		// drawImage_samp(imageObj, 400, 600, "canvas_9");
-		// drawImage_samp(imageObj, 500, 700, "canvas_10");
-	 //  };
-	   
-      // imageObj.src="images/brain/IM-0001-0014.png";
-
-
-
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -203,19 +177,12 @@ onload = function() {
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-
-// var image_url = "images/brain/IM-0001-0014.png";
-// //$('.bg').css('background-image');
-// //image_url = image_url.slice(4, -1); // now you can have all kinds of characters in your image urls
-// var image = new Image();
-
-// image.src = image_url;
 function prepare_canvas(image){
     var w = image.width;
     var h = image.height;
 
-    var stringa = '<canvas id="canvas_1" height="'+h+'" width="'+w+'" class="bezier"></canvas>';
-    var div = document.getElementById("divCanvas_1");
+    var stringa = '<canvas id="canvas_segm" height="'+h+'" width="'+w+'" class="bezier"></canvas>';
+    var div = document.getElementById("divCanvas_segm");
     //divCanvas -> prendo imageUrl, faccio una stringa che mi prepara una canvas con le stesse dimensioni dell'immagine
     div.innerHTML = stringa;
 }

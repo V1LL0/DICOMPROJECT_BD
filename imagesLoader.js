@@ -10,23 +10,18 @@ var canvas = document.getElementById("canvasOriginalImage");
 var context = canvas.getContext("2d");
 var firstImg = new Image();
 
-
 function callback() {
+  firstImg = images[0];
 
-  firstImg = images[(images.length/2) | 0];
   context.drawImage(firstImg, 0, 0);
+
   drawImage_gray(firstImg);
   prepare_canvas(firstImg);
   drawImage_segm(firstImg);
 }
 
-
-//funzione che ci cambia imageObj
-// function change_imgObj(new_Image){
-//   imageObj = new_Image;
-// }
-
 function handle_files(event) {
+  images = [];
   //console.log("i'm in!");
   var files = this.files;
 
@@ -48,12 +43,12 @@ function handle_files(event) {
     reader.onload = (function (file) {
       return function (event) {
         var data = event.target.result;
-        // var img = document.createElement('img');
-        // img.setAttribute('src', data);
-        // img.setAttribute('data-name', file.name);
+    
         var img = new Image();
         img.src = data;
+      
         images.push(img);
+      
         completed += 1;
 
         if (completed === len) {
@@ -61,7 +56,7 @@ function handle_files(event) {
         }
       };
     })(file);
-
+    
     // Read in the image file as a data URL.
     reader.readAsDataURL(file);
   }

@@ -28,7 +28,7 @@
 			</td align="center" style="width: 50%">
 
 			<td align="center">
-				<canvas id="canvas_2" width="550" height="550" style="padding-top: 90px"></canvas>
+				<canvas id="canvas_gray" width="550" height="550" style="padding-top: 90px"></canvas>
 			</td>
 		</tr>
 		
@@ -38,8 +38,8 @@
 		
 			<tr>
 				<td align="center">
-					<div id="divCanvas_1">
-						<!-- <canvas id="canvas_1" width="550" height="550"></canvas> -->
+					<div id="divCanvas_segm">
+						<canvas id="canvas_segm" width="550" height="550"></canvas> 
 					</div>
 				</td>
 				<td>
@@ -79,11 +79,16 @@
 
       
       
-    <canvas id="idCanvas" width="550" height="550"></canvas>
+    <canvas id="canvas_blockDecomp" width="550" height="550"></canvas>
 
     <td align="center" style="width: 50%">
 		<button onClick="clicked3D()">3D</button>
 	</td>
+
+    <td align="center" style="width: 50%">
+		<textarea rows="30" id="tx_coordinates" name="tx_coordinates" style="width: 90%"></textarea>
+	</td>
+
   
   </body>
   	
@@ -92,7 +97,7 @@
  	<script src="html5slider.js"></script>
     
     <script src="mosaicImage.js"></script>
-    <script src="3D.js"></script>
-    
+
+    <script src="3D.js"></script> 
 
 </html>
