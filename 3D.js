@@ -1,4 +1,3 @@
-// var i = 1;
 var parametro_per_piu_immagini = 0;
 //per il testo creo una variabile globale
 var stringa_definitiva = "";
@@ -38,11 +37,6 @@ function clicked3D() {
 		changedSegm();
 	}
 	
-	// i++;
-	//se supera la lunghezza dell'array allora posso chiudere tutto e non va più avanti nel caso si clicca ancora sul NEXT
-	// if(k>images.length)
-	// 	return;
-
 	stringa_definitiva += stringa_presa+"\n\n\n";
 	// txArea.value = stringa_definitiva;
 	
