@@ -6,7 +6,7 @@ var stringa_definitiva = "";
 
 function clicked3D() {
 	
-	var txArea = document.getElementById("tx_coordinates");
+	// var txArea = document.getElementById("tx_coordinates");
 	
 	for(var k=0; k<images.length;k++){			
 		if(k<images.length){
@@ -44,10 +44,12 @@ function clicked3D() {
 	// 	return;
 
 	stringa_definitiva += stringa_presa+"\n\n\n";
-	txArea.value = stringa_definitiva;
+	// txArea.value = stringa_definitiva;
 	
 	}
+	//avvio di plasm.js
+	var funzione3D = Function(stringa_definitiva);
+	funzione3D();
+
 }
 
-//var funzione3D = Function(stringaFunzione);
-//funzione3D();
