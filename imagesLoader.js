@@ -1,7 +1,7 @@
    //////////////////FILES READER/////////////////////////////////  
 
     var input = document.getElementById('input');
-    var cleanAll = document.getElementById('cleanAll');
+    
     var images = [];
     var canvas = document.getElementById("canvasOriginalImage");
     var context = canvas.getContext("2d");
@@ -59,44 +59,9 @@
       }
     }
 
-    function functionCleanAll(){
-      this.images = [];
-      files = [];
-      this.files = [];
-      len = files.length;
-      i = 0;
-      file = null;
-      complete = false;
-      completed = 0;
-      //CLEANING OF CANVAS
-      var cvsOI = document.getElementById("canvasOriginalImage");
-      var cvsGray = document.getElementById("canvas_gray");
-      var cvsSegm = document.getElementById("canvas_segm");
-      var cvsBlk = document.getElementById("canvas_blockDecomp");
-      var ctxOI = cvsOI.getContext("2d");
-      var ctxGray = cvsGray.getContext("2d");
-      var ctxSegm = cvsSegm.getContext("2d");
-      var ctxBlk = cvsBlk.getContext("2d");
-
-      ctxOI.clearRect(0, 0, cvsOI.width, cvsOI.height);
-      ctxGray.clearRect(0, 0, cvsGray.width, cvsGray.height);
-      ctxSegm.clearRect(0, 0, cvsSegm.width, cvsSegm.height);
-      ctxBlk.clearRect(0, 0, cvsBlk.width, cvsBlk.height);
-      ///////
-
-
-    }
-
-
-
-
-
 
 
     input.addEventListener('change', handle_files);
-    cleanAll.addEventListener('click', functionCleanAll);
-
-
-
+    
       
       ///////////////////////////////////////////////////////////// 
