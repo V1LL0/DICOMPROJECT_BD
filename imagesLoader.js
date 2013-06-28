@@ -68,7 +68,6 @@
       file = null;
       complete = false;
       completed = 0;
-      console.log("muhahhahahahahah pulisco tutto io!!!");
       //CLEANING OF CANVAS
       var cvsOI = document.getElementById("canvasOriginalImage");
       var cvsGray = document.getElementById("canvas_gray");
