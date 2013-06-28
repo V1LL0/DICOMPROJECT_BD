@@ -133,7 +133,7 @@
 	
 	img.onload = function() {
 		var $ = function(id) { return document.getElementById(id); };
-		$('blkS').oninput = function() { $('BlockSize').innerHTML = this.value; };
+		$('blkS').oninput = function() { $('valueBlockSize').innerHTML = this.value; };
 		$('blkS').oninput();
 		mosaicImage(1);
 	};

@@ -12,6 +12,12 @@ onload = function() {
 	$('mini').oninput();
 	$('maxi').oninput = function() { $('massimo').innerHTML = this.value; };
 	$('maxi').oninput();
+	//blockDecomp
+	$('blkS').oninput = function() { $('valueBlockSize').innerHTML = this.value; };
+	$('blkS').oninput();
+	$('distSlice').oninput = function() { $('valueDistSlice').innerHTML = this.value; };
+	$('distSlice').oninput();
+	
 
 };
 

@@ -71,8 +71,9 @@
 			<h2>Block Decomposition</h2>
 			<p align="justify">Choose the block size to decompose the image</p>
 			<br>					
-				Block Size: <input type="range" id="blkS"  value="1" min="1" max="10" step="1" / style="width: 100%;" onChange="changedBlk()">
-				<div id="BlockSize">&nbsp;</div>
+				Block Size:
+				<input type="range" id="blkS"  value="1" min="1" max="10" step="1" / style="width: 100%;" onChange="changedBlk()">
+				<div id="valueBlockSize"></div>
 			
 			</td>
 		</tr>
@@ -98,8 +99,9 @@
 
    			<td  align="center">
    				<br><br>
-   				      <p> Distance Between Slice: </p>
-   				      <input type="range" id="distSlice"  value="1" min="0" max="5" step="1" / style="width: 40%;">
+   				    	<p> Distance Between Slice: </p>
+   				    	<input type="range" id="distSlice"  value="1" min="0" max="5" step="1" / style="width: 40%;">
+						<div id="valueDistSlice"></div>
    			</td>
    			<td>
    				<button onClick="clicked3D()">
