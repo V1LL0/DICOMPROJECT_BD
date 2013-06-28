@@ -73,9 +73,7 @@
 			<br>					
 				Block Size: <input type="range" id="blkS"  value="1" min="1" max="10" step="1" / style="width: 100%;" onChange="changedBlk()">
 				<div id="BlockSize">&nbsp;</div>
-			</td>
-			<td>
-				Distance Between Slice: <input type="range" id="distSlice"  value="1" min="0" max="5" step="1" / style="width: 100%;">
+			
 			</td>
 		</tr>
 	</table>
@@ -83,8 +81,10 @@
       
       
     <canvas id="canvas_blockDecomp" width="550" height="550"></canvas>
-
-	
+	<!-- Distance Between Slice: <input type="range" id="distSlice"  value="1" min="0" max="5" step="1" / style="width: 25%;"> -->
+	<br>
+	<br>
+	<br>
 	<!-- 	<tr>
 	    	<td align="center" style="width: 50%">
 				<textarea rows="30" id="tx_coordinates" name="tx_coordinates" style="width: 90%"></textarea>
@@ -93,12 +93,20 @@
 	<table style="width: 100%">
    		<tr>
    			<td COLSPAN="2" align="center"><h2>Image 3D with plasm.js</h2></td>
-   			
+   		</tr>	
+   		<tr>
+
+   			<td  align="center">
+   				<br><br>
+   				      <p> Distance Between Slice: </p>
+   				      <input type="range" id="distSlice"  value="1" min="0" max="5" step="1" / style="width: 40%;">
+   			</td>
    			<td>
    				<button onClick="clicked3D()">
    				<img src="images/omino.gif" alt="3D" /> 
    				<br />3D</button> 
    			</td>
+
    		</tr>
   	</table>
    		<!-- <tr>
