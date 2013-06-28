@@ -109,8 +109,10 @@
 	//altrimenti ogni volta che cambio la dimensione del blocco mi aggiunge DRAW alla stringa
 
 		if(y_n_coordinates){
-			var dist = j*5;
-			var alt = (j*5)+5
+
+ 			var distanceSlice = parseInt(document.getElementById('distSlice').value);
+			var dist = (j*5) + (j*5*distanceSlice);
+			var alt = (j*5)+5 + (j*5*distanceSlice);
 
 			for(var i=0; i<rectanglesArray.length; i++){
 				
@@ -139,7 +141,7 @@
 	//onChange function
 	function changedBlk(){
 		blockSize = document.getElementById('blkS').value;
-	    mosaicImage(parseInt(blockSize),true);
+		mosaicImage(parseInt(blockSize),true);
 	};
 	
 
