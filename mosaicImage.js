@@ -103,22 +103,24 @@
 			}
 		}
 		
-	var k = parametro_per_piu_immagini
+	var j = parametro_per_piu_immagini
 	var stringaFunzione = "";
 	stringa_presa = "";
+	//altrimenti ogni volta che cambio la dimensione del blocco mi aggiunge DRAW alla stringa
 
 		if(y_n_coordinates){
-			var dist = k*5;
-			var alt = (k*5)+5
+			var dist = j*5;
+			var alt = (j*5)+5
 
 			for(var i=0; i<rectanglesArray.length; i++){
 				
-				stringaFunzione += "DRAW(DOMAIN([[" + rectanglesArray[i][0] + "," + (rectanglesArray[i][0]+rectanglesArray[i][2]) + "], [" + rectanglesArray[i][1] + ", " + (rectanglesArray[i][1]+rectanglesArray[i][3]) + "],[" + dist + "," + alt + "]])([1,1,1]));\n";
+				stringaFunzione += "DRAW(COLOR([0,0,0])(DOMAIN([[" + rectanglesArray[i][0] + "," + (rectanglesArray[i][0]+rectanglesArray[i][2]) + "], [" + rectanglesArray[i][1] + ", " + (rectanglesArray[i][1]+rectanglesArray[i][3]) + "],[" + dist + "," + alt + "]])([1,1,1])));\n";
 			
 			}
 		}
 		ctxDestination.putImageData(imgData,0,0);
 		stringa_presa = stringaFunzione;
+
 
 		return true;
 }

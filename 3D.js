@@ -1,13 +1,15 @@
-var i = 1;
+// var i = 1;
 var parametro_per_piu_immagini = 0;
-//per il testo
+//per il testo creo una variabile globale
 var stringa_definitiva = "";
 
-function clicked3D() {
 
-		var txArea = document.getElementById("tx_coordinates");
-	for(var k=0; k<=images.length;k++){			
-		if(i<images.length){
+function clicked3D() {
+	
+	var txArea = document.getElementById("tx_coordinates");
+	
+	for(var k=0; k<images.length;k++){			
+		if(k<images.length){
 
 		//CLEANING OF CANVAS //pulizia di tutto
  		var cvsOI = document.getElementById("canvasOriginalImage");
@@ -24,28 +26,25 @@ function clicked3D() {
 	 	ctxSegm.clearRect(0, 0, cvsSegm.width, cvsSegm.height);
 	 	ctxBlk.clearRect(0, 0, cvsBlk.width, cvsBlk.height);
 	 	 ///// una volta pulite le canvas, ci rimetto le immagini che mi servono
-
+	 	parametro_per_piu_immagini = k;
  		//----------------------------------------------------------
 		//RICREO LA CALLBACK 
  		ctxOI.drawImage(firstImg, 0, 0);
 
-		firstImg = images[i];
+		firstImg = images[k];
 		//per vedere l'immagine che prende
-		console.log("--------------"+firstImg.src+" "+i+"-----------------");
+		// console.log("--------------"+firstImg.src+" "+i+"-----------------");
 	
 		changedSegm();
-
-		parametro_per_piu_immagini = i;
 	}
 	
+	// i++;
 	//se supera la lunghezza dell'array allora posso chiudere tutto e non va più avanti nel caso si clicca ancora sul NEXT
-	if(i>images.length)
-		return;
+	// if(k>images.length)
+	// 	return;
 
 	stringa_definitiva += stringa_presa+"\n\n\n";
 	txArea.value = stringa_definitiva;
-	
-	i++;
 	
 	}
 }
