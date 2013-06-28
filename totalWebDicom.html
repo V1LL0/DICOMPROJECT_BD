@@ -15,22 +15,25 @@
 			<INPUT TYPE="button" VALUE="CLEAN" onClick="document.location.reload()">
 		</td></tr>
 		<tr>
-			<td><h2>Original image</h2>
+			<td><br><br><h2>Original image</h2>
 				<p align="justify">Original Image before processing.</p>
 			</td>
 			<td>
-				<h2>Grayscale filter</h2>
+				<br><br><h2>Grayscale filter</h2>
 				<p align="justify">We need to convert the image to gray for having a deeper precision for the segmentation.</p>
 			</td>
 		</tr>
 		<tr>
 			<td align="center" style="width: 50%">
-				<!-- <img src="images/brain/IM-0001-0014.png" onLoad="changedSegm()"> -->
-				<canvas id="canvasOriginalImage" width="550" height="550" style="padding-top: 90px"></canvas>
+				<div id="divCanvas_OriginalImage">
+					<canvas id="canvasOriginalImage" width="550" height="550" style="padding-top: 90px"></canvas>
+				</div>
 			</td align="center" style="width: 50%">
 
 			<td align="center">
-				<canvas id="canvas_gray" width="550" height="550" style="padding-top: 90px"></canvas>
+				<div id="divCanvas_gray">
+					<canvas id="canvas_gray" width="550" height="550" style="padding-top: 90px"></canvas>
+				</div>
 			</td>
 		</tr>
 		<tr><td>&nbsp;</td></tr>

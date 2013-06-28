@@ -186,11 +186,36 @@ function prepare_canvas(image){
 	var w = image.width;
 	var h = image.height;
 
-	var stringa = '<canvas id="canvas_segm" height="'+h+'" width="'+w+'" class="bezier"></canvas>';
-	var div = document.getElementById("divCanvas_segm");
+	var stringa1 = '<canvas id="canvas_segm" height="'+h+'" width="'+w+'" class="bezier"></canvas>';
+	var div1 = document.getElementById("divCanvas_segm");
     //divCanvas -> prendo imageUrl, faccio una stringa che mi prepara una canvas con le stesse dimensioni dell'immagine
-    div.innerHTML = stringa;
+    div1.innerHTML = stringa1;
+
 }
+
+function prepare_canvas_gray(image){
+	var w = image.width;
+	var h = image.height;
+
+	var stringa2 = '<canvas id="canvas_segm" height="'+h+'" width="'+w+'" class="bezier"></canvas>';
+	
+	var div2 = document.getElementById("divCanvas_gray");
+    //divCanvas -> prendo imageUrl, faccio una stringa che mi prepara una canvas con le stesse dimensioni dell'immagine
+    div2.innerHTML = stringa2;
+}
+
+function prepare_canvas_OI(image){
+	var w = image.width;
+	var h = image.height;
+
+	var stringa3 = '<canvas id="canvas_segm" height="'+h+'" width="'+w+'" class="bezier"></canvas>';
+
+	var div3 = document.getElementById("divCanvas_OriginalImage");
+    //divCanvas -> prendo imageUrl, faccio una stringa che mi prepara una canvas con le stesse dimensioni dell'immagine
+    div3.innerHTML = stringa3;
+}
+
+
 
 
 
