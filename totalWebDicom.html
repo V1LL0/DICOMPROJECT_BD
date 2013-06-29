@@ -2,17 +2,28 @@
   <head>
     <title></title>
     <meta charset="UTF-8">
-    <style></style>
+    <style type="text/css">
+		#pulsante {
+		 outline: none;
+		 cursor: pointer;
+		 text-align: center;
+		 text-decoration: none;
+		 font: bold 12px Arial, Helvetica, sans-serif;
+		 color: #fff;
+		 padding: 10px 20px;
+		 border: solid 1px #3f4c6b;
+		 background: #7089b3;
+		}
+    </style>
 	
   </head>
   
   <body>
     <table style="width: 100%">
-
 		<tr><td align="center" COLSPAN="2"><h2>Web Dicom Project</h2><br><h2>Samples</h2></td></tr>
 		<tr><td align="center" COLSPAN="2">
 			<input id="input" type="file" multiple>
-			<INPUT TYPE="button" VALUE="CLEAN" onClick="document.location.reload()">
+			<INPUT id = "pulsante" TYPE="button" VALUE="CLEAN" onClick="document.location.reload()">
 		</td></tr>
 		<tr>
 			<td><br><br><h2>Original image</h2>
@@ -107,7 +118,7 @@
 						<div id="valueDistSlice"></div>
    			</td>
    			<td>
-   				<button onClick="clicked3D()">
+   				<button id = "pulsante" onClick="clicked3D()">
    				<img src="images/omino.gif" alt="3D" /> 
    				<br />3D</button> 
    			</td>
@@ -173,16 +184,11 @@
 		}
 		</script>
 
-		<div class="row-fluid">
-		<div id="wrapper">
-			<div id="page-wrapper">
-				<div class="span12">
+		
+		
 						<div id="plasm" width="650" height="450" onclick="on()" onMouseOut="out()" >
 		               <!--  <canvas width="600" height="500"></canvas></div> -->
-				</div>
-			</div>
-		</div>
-		</div>
+		               	</div>
 
 
   <!--fine plasm -->
