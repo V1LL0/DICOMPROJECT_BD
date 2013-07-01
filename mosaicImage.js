@@ -116,7 +116,7 @@
 
 			for(var i=0; i<rectanglesArray.length; i++){
 				
-				stringaFunzione += "DRAW(COLOR([0,0,0])(DOMAIN([[" + rectanglesArray[i][0] + "," + (rectanglesArray[i][0]+rectanglesArray[i][2]) + "], [" + rectanglesArray[i][1] + ", " + (rectanglesArray[i][1]+rectanglesArray[i][3]) + "],[" + dist + "," + alt + "]])([1,1,1])));\n";
+				stringaFunzione += "DRAW(COLOR([64/255, 64/255, 64/255])(DOMAIN([[" + rectanglesArray[i][0] + "," + (rectanglesArray[i][0]+rectanglesArray[i][2]) + "], [" + rectanglesArray[i][1] + ", " + (rectanglesArray[i][1]+rectanglesArray[i][3]) + "],[" + dist + "," + alt + "]])([1,1,1])));\n";
 			
 			}
 		}
