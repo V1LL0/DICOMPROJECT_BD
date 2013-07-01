@@ -21,9 +21,13 @@
 # The Algorithm
 
 This solution take as input a 2bit image.
+
 We need to flow a sub-matrix on the image.
+
 Dimensions of sub-matrix is decided by user.
+
 The algorithm measures the quantity of black pixels in contraposition to white pixels.
+
 All pixels of the submatrix become of the same color of prevalent color.
 
 
