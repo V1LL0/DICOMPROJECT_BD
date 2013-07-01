@@ -33,5 +33,6 @@ The algorithm measures the quantity of black pixels in contraposition to white p
 All pixels of the submatrix become of the same color of prevalent color.
 
 - - -
+#Here an explicative image:
 
-![PopCorn Prova](http://25.media.tumblr.com/tumblr_m91m3tp5LX1r4q0x3o1_400.gif)
+![Block flow](http://picasion.com/pic71/fac47580c7966c32204d12c0d8b6db5d.gif)
