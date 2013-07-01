@@ -7,15 +7,14 @@
  
  # Initial Idea
  
- Implements Block Decomposition of an image
+ ## Implements Block Decomposition of an image
  
  # How to do?
  
- We analyzed different algorithms, we found some solutions:
- 
- -QuadTree Decomposition
- -Other Algorithm (we'll modify this raw, next)
- -Mosaic
+ ## We analyzed different algorithms, we found some solutions:
+ * QuadTree Decomposition
+ * Other Algorithm (we'll modify this raw, next)
+ * Mosaic
  
 
 - - -
