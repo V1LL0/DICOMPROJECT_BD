@@ -35,3 +35,15 @@ All pixels of the submatrix become of the same color of prevalent color.
 - - -
 #Here an explicative image:
 ![Block flow](http://picasion.com/pic71/fac47580c7966c32204d12c0d8b6db5d.gif)
+
+- - -
+# Preparation Of Image
+
+> We need to prepare the image with two operations:
+> -Grayscale
+> -Thresholding
+>
+> Thresholding take the image grayscalled and return an image in two bit,
+> that shows only details desired by the user,
+> according with min and max values selected.
+
