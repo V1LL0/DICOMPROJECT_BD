@@ -55,6 +55,7 @@ according with min and max values selected.
 # Code Optimization
 
 ##After described operations, we thought on optimize the code, to make it run faster:
+
 -We've, initially, used translated CUBOIDs, now we use DOMAINs, painted directly on right points.
 -We've, initially, used a single domain for each detected block, now we've unified continued blocks on same row.
 
