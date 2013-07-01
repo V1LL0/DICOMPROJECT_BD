@@ -39,7 +39,7 @@ All pixels of the submatrix become of the same color of prevalent color.
 - - -
 # Preparation Of Image
 
-We need to prepare the image with two operations:
+## We need to prepare the image with two operations:
 * Grayscale
 * Thresholding
 
