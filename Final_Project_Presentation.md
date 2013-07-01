@@ -4,13 +4,11 @@
  ##  Valerio Cestarelli
  
  - - -
- 
  # Initial Idea
  
  ## Implements Block Decomposition of an image
  
  - - -
- 
  # How to do?
  
  ## We analyzed different algorithms, we found some solutions:
@@ -19,8 +17,7 @@
  * Mosaic
  
 
-- - -
-
+ - - -
  # The Algorithm
  
  This solution take as input a 2bit image.
