@@ -35,6 +35,7 @@ All pixels of the submatrix become of the same color of prevalent color.
 - - -
 # Here an explicative image:
 ![Block flow](http://picasion.com/pic71/fac47580c7966c32204d12c0d8b6db5d.gif)
+http://picasion.com/pic71/8f22d60280c3117ef34c1a4574afe494.gif
 
 - - -
 # Preparation Of Image
