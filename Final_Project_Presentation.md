@@ -34,4 +34,4 @@ All pixels of the submatrix become of the same color of prevalent color.
 
 - - -
 
-![PopCorn Prova](:http://performinsider.com/wp-content/uploads/2012/02/Stephen-Colbert-Popcorn.gif)
+![PopCorn Prova](http://25.media.tumblr.com/tumblr_m91m3tp5LX1r4q0x3o1_400.gif)
