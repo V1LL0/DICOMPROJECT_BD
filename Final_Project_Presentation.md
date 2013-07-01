@@ -60,6 +60,10 @@ according with min and max values selected.
 * We've, initially, used a single domain for each detected block, now we've unified continued blocks on same row.
 
 - - -
+# 3D 
 
+## Image 3D with plasm.js:
 
+* We can upload more than one image
+* Later to place them all one above the other, at a distance selected by the user, to get a 3D effect.
 
