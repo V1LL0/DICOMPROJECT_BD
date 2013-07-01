@@ -65,5 +65,5 @@ according with min and max values selected.
 ## Image 3D with plasm.js:
 
 * We can upload more than one image
-* Later to place them all one above the other, at a distance selected by the user, to get a 3D effect.
+* Later we can place them all one above the other, at a distance selected by the user, to get a 3D effect.
 
