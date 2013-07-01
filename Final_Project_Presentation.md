@@ -32,4 +32,6 @@ The algorithm measures the quantity of black pixels in contraposition to white p
 
 All pixels of the submatrix become of the same color of prevalent color.
 
+- - -
+
 
