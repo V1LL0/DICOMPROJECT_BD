@@ -43,9 +43,9 @@ All pixels of the submatrix become of the same color of prevalent color.
 * Grayscale
 * Thresholding
 
-> Thresholding take the image grayscalled and return an image in two bit,
-> that shows only details desired by the user,
-> according with min and max values selected.
+## Thresholding take the image grayscalled and return an image in two bit,
+that shows only details desired by the user,
+according with min and max values selected.
 
 ![](http://s24.postimg.org/letrqpz1h/Pavlovsk_Railing_of_bridge_Yellow_palace_Winter.jpg)
 ![](http://s24.postimg.org/fcm508alh/Schermata_del_2013_07_01_18_05_14.png)
