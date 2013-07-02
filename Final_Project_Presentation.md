@@ -14,8 +14,9 @@
 # How to do?
 
 ## We analyzed different algorithms, we found some solutions:
-* QuadTree Decomposition
-* Other Algorithm (we'll modify this raw, next)
+* QuadTree Decomposition (in Java)
+* QuadTree Decomposition (in JavaScript)
+* Decomposition in Rectangles (in Python)
 * Mosaic
 
 
