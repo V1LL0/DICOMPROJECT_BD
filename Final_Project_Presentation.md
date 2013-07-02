@@ -70,6 +70,4 @@ according with min and max values selected.
 * Later we can place them all one above the other, at a distance selected by the user, to get a 3D effect.
 
 - - -
-# Conclusions
-
-## In conclusion... we're the best! So fuckin true!
+# The End
