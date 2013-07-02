@@ -23,7 +23,7 @@
 - - -
 # The Algorithm
 
-This solution take as input a 2bit image.
+This solution takes as input a 2bit image.
 
 We need to flow a sub-matrix on the image.
 
