@@ -14,15 +14,16 @@
 # How to do?
 
 ## We analyzed different algorithms, we found some solutions:
-* QuadTree Decomposition
-* Other Algorithm (we'll modify this raw, next)
+* QuadTree Decomposition (in Java)
+* QuadTree Decomposition (in JavaScript)
+* Decomposition in Rectangles (in Python)
 * Mosaic
 
 
 - - -
 # The Algorithm
 
-This solution take as input a 2bit image.
+This solution takes as input a 2bit image.
 
 We need to flow a sub-matrix on the image.
 
@@ -35,7 +36,8 @@ All pixels of the submatrix become of the same color of prevalent color.
 - - -
 # Here an explicative image:
 ![Block flow](http://picasion.com/pic71/fac47580c7966c32204d12c0d8b6db5d.gif)
-![Block flow2](http://picasion.com/pic71/8f22d60280c3117ef34c1a4574afe494.gif)
+
+![Block flow2](http://picasion.com/pic71/4a756b8655336e23b19411da134430c0.gif)
 
 - - -
 # Preparation Of Image
@@ -68,3 +70,5 @@ according with min and max values selected.
 * We can upload more than one image
 * Later we can place them all one above the other, at a distance selected by the user, to get a 3D effect.
 
+- - -
+# The End
