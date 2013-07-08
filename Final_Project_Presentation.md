@@ -50,9 +50,9 @@ Thresholding take the image grayscalled and return an image in two bit, that sho
 
 according with min and max values selected.
 
-![](http://s24.postimg.org/letrqpz1h/Pavlovsk_Railing_of_bridge_Yellow_palace_Winter.jpg)
-![](http://s24.postimg.org/fcm508alh/Schermata_del_2013_07_01_18_05_14.png)
-![](http://s24.postimg.org/5zl3cqpwl/Pavlovsk_Railing_of_bridge_Yellow_palace_Winter.jpg)
+![](https://s24.postimg.org/letrqpz1h/Pavlovsk_Railing_of_bridge_Yellow_palace_Winter.jpg)
+![](https://s24.postimg.org/fcm508alh/Schermata_del_2013_07_01_18_05_14.png)
+![](https://s24.postimg.org/5zl3cqpwl/Pavlovsk_Railing_of_bridge_Yellow_palace_Winter.jpg)
 
 - - - 
 # Code Optimization
